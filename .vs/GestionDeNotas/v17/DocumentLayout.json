@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BDF7BA3A-EB7A-4EB9-AD3E-5EF5A11F75D9}|Entity\\Entity.csproj|c:\\users\\brayan\\source\\repos\\gestiondenotas\\entity\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDF7BA3A-EB7A-4EB9-AD3E-5EF5A11F75D9}|Entity\\Entity.csproj|solutionrelative:entity\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCF05666-B067-4685-AC7C-2C9642BF8F22}|BLL\\BLL.csproj|c:\\users\\brayan\\source\\repos\\gestiondenotas\\bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCF05666-B067-4685-AC7C-2C9642BF8F22}|BLL\\BLL.csproj|solutionrelative:bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{428CFEE5-3DAB-45ED-B16B-B55A8C95529F}|DAL\\DAL.csproj|c:\\users\\brayan\\source\\repos\\gestiondenotas\\dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{428CFEE5-3DAB-45ED-B16B-B55A8C95529F}|DAL\\DAL.csproj|solutionrelative:dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\GestionDeNotas.csproj|c:\\users\\brayan\\source\\repos\\gestiondenotas\\gestiondenotas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\GestionDeNotas.csproj|solutionrelative:gestiondenotas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\Entity\\Class1.cs",
+              "RelativeDocumentMoniker": "Entity\\Class1.cs",
+              "ToolTip": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\Entity\\Class1.cs",
+              "RelativeToolTip": "Entity\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T22:38:20.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\BLL\\Class1.cs",
+              "RelativeDocumentMoniker": "BLL\\Class1.cs",
+              "ToolTip": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\BLL\\Class1.cs",
+              "RelativeToolTip": "BLL\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T22:38:05.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\DAL\\Class1.cs",
+              "RelativeDocumentMoniker": "DAL\\Class1.cs",
+              "ToolTip": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\DAL\\Class1.cs",
+              "RelativeToolTip": "DAL\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T22:37:54.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\Form1.cs",
+              "RelativeDocumentMoniker": "GestionDeNotas\\Form1.cs",
+              "ToolTip": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GestionDeNotas\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T22:37:31.489Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
