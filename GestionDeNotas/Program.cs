@@ -1,12 +1,13 @@
-﻿using System;
+﻿using GestionDeNotas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GestionDeNotas
+namespace Presentacion
 {
-    internal static class Program
+     static class Program
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.

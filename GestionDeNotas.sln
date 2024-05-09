@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionDeNotas", "GestionDeNotas\GestionDeNotas.csproj", "{5B826A3C-6585-42C3-BA9F-46D66EC824F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion", "GestionDeNotas\Presentacion.csproj", "{5B826A3C-6585-42C3-BA9F-46D66EC824F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{428CFEE5-3DAB-45ED-B16B-B55A8C95529F}"
 EndProject
