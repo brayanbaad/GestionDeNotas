@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{428CFEE5-3DAB-45ED-B16B-B55A8C95529F}|DAL\\DAL.csproj|c:\\users\\brayan\\source\\repos\\gestiondenotas\\dal\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{428CFEE5-3DAB-45ED-B16B-B55A8C95529F}|DAL\\DAL.csproj|solutionrelative:dal\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|c:\\users\\brayan\\source\\repos\\gestiondenotas\\gestiondenotas\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|solutionrelative:gestiondenotas\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|c:\\users\\brayan\\source\\repos\\gestiondenotas\\gestiondenotas\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|solutionrelative:gestiondenotas\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|c:\\users\\brayan\\source\\repos\\gestiondenotas\\gestiondenotas\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|solutionrelative:gestiondenotas\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|c:\\users\\brayan\\source\\repos\\gestiondenotas\\gestiondenotas\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|solutionrelative:gestiondenotas\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|c:\\users\\brayan\\source\\repos\\gestiondenotas\\gestiondenotas\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|solutionrelative:gestiondenotas\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|c:\\users\\brayan\\source\\repos\\gestiondenotas\\gestiondenotas\\frmdocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|solutionrelative:gestiondenotas\\frmdocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,44 +26,55 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsuarioRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\DAL\\UsuarioRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\UsuarioRepository.cs",
-              "ToolTip": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\DAL\\UsuarioRepository.cs",
-              "RelativeToolTip": "DAL\\UsuarioRepository.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAAACoAAAAwAAAA",
+              "DocumentIndex": 3,
+              "Title": "FrmDocentes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmDocentes.cs",
+              "RelativeDocumentMoniker": "GestionDeNotas\\FrmDocentes.cs",
+              "ToolTip": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmDocentes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GestionDeNotas\\FrmDocentes.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T00:20:54.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-11T04:25:40.406Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FrmLogin.cs",
-              "DocumentMoniker": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmLogin.cs",
-              "RelativeDocumentMoniker": "GestionDeNotas\\FrmLogin.cs",
-              "ToolTip": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmLogin.cs",
-              "RelativeToolTip": "GestionDeNotas\\FrmLogin.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAxwCIAAAARAAAA",
+              "Title": "FrmInicio.cs",
+              "DocumentMoniker": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmInicio.cs",
+              "RelativeDocumentMoniker": "GestionDeNotas\\FrmInicio.cs",
+              "ToolTip": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmInicio.cs",
+              "RelativeToolTip": "GestionDeNotas\\FrmInicio.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAYwDoAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T04:45:07.175Z",
+              "WhenOpened": "2024-05-11T03:10:39.082Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FrmLogin.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmLogin.cs",
-              "RelativeDocumentMoniker": "GestionDeNotas\\FrmLogin.cs",
-              "ToolTip": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmLogin.cs [Dise\u00F1o]",
-              "RelativeToolTip": "GestionDeNotas\\FrmLogin.cs [Dise\u00F1o]",
+              "Title": "FrmUsuarios.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmUsuarios.cs",
+              "RelativeDocumentMoniker": "GestionDeNotas\\FrmUsuarios.cs",
+              "ToolTip": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmUsuarios.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GestionDeNotas\\FrmUsuarios.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-09T02:36:32.538Z",
+              "WhenOpened": "2024-05-11T03:06:38.736Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmInicio.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmInicio.cs",
+              "RelativeDocumentMoniker": "GestionDeNotas\\FrmInicio.cs",
+              "ToolTip": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmInicio.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GestionDeNotas\\FrmInicio.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T01:40:05.263Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

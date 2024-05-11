@@ -28,15 +28,21 @@ namespace GestionDeNotas
             {
                 if (usuario.Rol == "ADMINISTRADOR")
                 {
-                   FrmInicio frmInicio = new FrmInicio();
+                   FrmInicio frmInicio = new FrmInicio(usuario);
                    frmInicio.Show();
                    this.Hide();
                     
                 }
+                else if (usuario.Rol == "DOCENTE")
+                {
+                    FrmUsuarios frmRegistro = new FrmUsuarios();
+                    frmRegistro.Show();
+                    this.Hide();
+                }
             }
             else
             {
-                MessageBox.Show("No se encontro el usuario","Mensjae",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("No se encontro el usuario","Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
         }
     }

@@ -17,3 +17,5 @@ C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\bin\Debug\Entity.pdb
 C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\bin\Debug\DAL.pdb
 C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNotas.FrmLogin.resources
 C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNotas.FrmInicio.resources
+C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNotas.FrmDocentes.resources
+C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNotas.FrmUsuarios.resources
