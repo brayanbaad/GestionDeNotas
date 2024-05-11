@@ -1,0 +1,8 @@
+C:\Users\Brayan\source\repos\GestionDeNotas\Entity\bin\Debug\Entity.dll
+C:\Users\Brayan\source\repos\GestionDeNotas\Entity\bin\Debug\Entity.pdb
+C:\Users\Brayan\source\repos\GestionDeNotas\Entity\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Brayan\source\repos\GestionDeNotas\Entity\obj\Debug\Entity.csproj.AssemblyReference.cache
+C:\Users\Brayan\source\repos\GestionDeNotas\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\Brayan\source\repos\GestionDeNotas\Entity\obj\Debug\Entity.csproj.Up2Date
+C:\Users\Brayan\source\repos\GestionDeNotas\Entity\obj\Debug\Entity.dll
+C:\Users\Brayan\source\repos\GestionDeNotas\Entity\obj\Debug\Entity.pdb

@@ -7,5 +7,13 @@ C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\Presentacio
 C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
 C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNotas.exe
 C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNotas.pdb
-C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNotas.FrmLoginAdmin.resources
-C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNotas.Form1.resources
+C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\Presenta.BC77CD05.Up2Date
+C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\bin\Debug\BLL.dll
+C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\bin\Debug\Entity.dll
+C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\bin\Debug\DAL.dll
+C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\bin\Debug\BLL.pdb
+C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\bin\Debug\Entity.pdb
+C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\bin\Debug\DAL.pdb
+C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNotas.FrmLogin.resources
+C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNotas.FrmInicio.resources

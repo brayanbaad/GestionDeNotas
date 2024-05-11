@@ -1,0 +1,10 @@
+C:\Users\Brayan\source\repos\GestionDeNotas\DAL\bin\Debug\DAL.dll
+C:\Users\Brayan\source\repos\GestionDeNotas\DAL\bin\Debug\DAL.pdb
+C:\Users\Brayan\source\repos\GestionDeNotas\DAL\bin\Debug\Entity.dll
+C:\Users\Brayan\source\repos\GestionDeNotas\DAL\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Brayan\source\repos\GestionDeNotas\DAL\bin\Debug\Entity.pdb
+C:\Users\Brayan\source\repos\GestionDeNotas\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Brayan\source\repos\GestionDeNotas\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Brayan\source\repos\GestionDeNotas\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\Brayan\source\repos\GestionDeNotas\DAL\obj\Debug\DAL.dll
+C:\Users\Brayan\source\repos\GestionDeNotas\DAL\obj\Debug\DAL.pdb

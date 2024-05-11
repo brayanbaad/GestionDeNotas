@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestionDeNotas
 {
-    public partial class FrmLoginAdmin : Form
+    public partial class FrmInicio : Form
     {
-        public FrmLoginAdmin()
+        public FrmInicio()
         {
             InitializeComponent();
         }
