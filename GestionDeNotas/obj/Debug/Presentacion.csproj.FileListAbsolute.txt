@@ -19,3 +19,4 @@ C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNo
 C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNotas.FrmInicio.resources
 C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNotas.FrmDocentes.resources
 C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNotas.FrmUsuarios.resources
+C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNotas.FrmEstudiante.resources

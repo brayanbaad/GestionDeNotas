@@ -39,6 +39,7 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -53,11 +54,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigConnection.cs" />
     <Compile Include="FrmDocentes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmDocentes.Designer.cs">
       <DependentUpon>FrmDocentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEstudiante.Designer.cs">
+      <DependentUpon>FrmEstudiante.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmInicio.cs">
       <SubType>Form</SubType>
@@ -81,6 +89,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmDocentes.resx">
       <DependentUpon>FrmDocentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEstudiante.resx">
+      <DependentUpon>FrmEstudiante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>

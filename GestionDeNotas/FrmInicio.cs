@@ -55,5 +55,15 @@ namespace GestionDeNotas
         {
             AbrirFormulario((IconMenuItem)sender, new FrmDocentes());
         }
+
+        private void menuEstudiantes_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconMenuItem)sender, new FrmEstudiante());
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

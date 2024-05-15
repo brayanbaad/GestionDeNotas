@@ -22,28 +22,28 @@ namespace GestionDeNotas
 
         private void btnIconIngresar_Click(object sender, EventArgs e)
         {
-            List<Usuario> usuarios = new UsuarioService().Listar();
-            Usuario usuario = new UsuarioService().Listar().Where(u=>u.IdUsuario == txtDocumento.Text && u.Clave == txtContraseña.Text).FirstOrDefault();
-            if (usuario != null )
-            {
-                if (usuario.Rol == "ADMINISTRADOR")
-                {
-                   FrmInicio frmInicio = new FrmInicio(usuario);
-                   frmInicio.Show();
-                   this.Hide();
+            //List<Usuario> usuarios = new UsuarioService().Listar();
+            //Usuario usuario = new UsuarioService().Listar().Where(u=>u.IdUsuario == txtDocumento.Text && u.Clave == txtContraseña.Text).FirstOrDefault();
+            //if (usuario != null )
+            //{
+            //    if (usuario.Rol == "ADMINISTRADOR")
+            //    {
+            //       FrmInicio frmInicio = new FrmInicio(usuario);
+            //       frmInicio.Show();
+            //       this.Hide();
                     
-                }
-                else if (usuario.Rol == "DOCENTE")
-                {
-                    FrmUsuarios frmRegistro = new FrmUsuarios();
-                    frmRegistro.Show();
-                    this.Hide();
-                }
-            }
-            else
-            {
-                MessageBox.Show("No se encontro el usuario","Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-            }
+            //    }
+            //    else if (usuario.Rol == "DOCENTE")
+            //    {
+            //        FrmUsuarios frmRegistro = new FrmUsuarios();
+            //        frmRegistro.Show();
+            //        this.Hide();
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No se encontro el usuario","Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            //}
         }
     }
 }
