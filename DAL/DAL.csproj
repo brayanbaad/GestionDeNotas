@@ -53,6 +53,7 @@
     <Compile Include="ConnectionManager.cs" />
     <Compile Include="EstudianteRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -17,15 +17,17 @@ namespace GestionDeNotas
         private static Usuario usuarioActual;
         private static IconMenuItem menuActivo = null;
         private static Form formularioActivo = null;
-        public FrmInicio(Usuario usuario)
+        public FrmInicio()
         {
-            usuarioActual = usuario;
+           
             InitializeComponent();
         }
 
+       
+
         private void FrmInicio_Load(object sender, EventArgs e)
         {
-            lblUsuario.Text = usuarioActual.Rol.ToString();
+           
         }
         private void AbrirFormulario(IconMenuItem menu,Form form)
         {
@@ -64,6 +66,11 @@ namespace GestionDeNotas
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void contenedor_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

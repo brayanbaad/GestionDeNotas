@@ -108,7 +108,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(313, 116);
+            this.label2.Location = new System.Drawing.Point(350, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(171, 22);
             this.label2.TabIndex = 2;
@@ -119,7 +119,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(310, 182);
+            this.label3.Location = new System.Drawing.Point(347, 171);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 19);
             this.label3.TabIndex = 3;
@@ -127,14 +127,14 @@
             // 
             // txtDocumento
             // 
-            this.txtDocumento.Location = new System.Drawing.Point(314, 141);
+            this.txtDocumento.Location = new System.Drawing.Point(351, 130);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(246, 20);
             this.txtDocumento.TabIndex = 4;
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(307, 211);
+            this.txtContraseña.Location = new System.Drawing.Point(344, 200);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(249, 20);
@@ -145,7 +145,7 @@
             this.btnIconIngresar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnIconIngresar.IconColor = System.Drawing.Color.Black;
             this.btnIconIngresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnIconIngresar.Location = new System.Drawing.Point(360, 267);
+            this.btnIconIngresar.Location = new System.Drawing.Point(397, 256);
             this.btnIconIngresar.Name = "btnIconIngresar";
             this.btnIconIngresar.Size = new System.Drawing.Size(144, 28);
             this.btnIconIngresar.TabIndex = 10;
@@ -161,7 +161,7 @@
             this.iconPictureBox2.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox2.IconSize = 34;
-            this.iconPictureBox2.Location = new System.Drawing.Point(272, 127);
+            this.iconPictureBox2.Location = new System.Drawing.Point(309, 116);
             this.iconPictureBox2.Name = "iconPictureBox2";
             this.iconPictureBox2.Size = new System.Drawing.Size(35, 34);
             this.iconPictureBox2.TabIndex = 11;
@@ -174,7 +174,7 @@
             this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.Lock;
             this.iconPictureBox3.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox3.Location = new System.Drawing.Point(272, 199);
+            this.iconPictureBox3.Location = new System.Drawing.Point(309, 188);
             this.iconPictureBox3.Name = "iconPictureBox3";
             this.iconPictureBox3.Size = new System.Drawing.Size(32, 32);
             this.iconPictureBox3.TabIndex = 12;

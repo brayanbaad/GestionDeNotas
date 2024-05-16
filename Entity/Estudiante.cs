@@ -15,7 +15,7 @@ namespace Entity
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
         public MailAddress Email { get; set; }
-        public DateTime FechaNacimiento { get; set; }
+        public string FechaNacimiento { get; set; }
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public decimal Promedio { get; set; }

@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.menu = new System.Windows.Forms.MenuStrip();
-            this.menuTitulo = new System.Windows.Forms.MenuStrip();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.contenedor = new System.Windows.Forms.Panel();
             this.menuUsuarios = new FontAwesome.Sharp.IconMenuItem();
             this.menuDocentes = new FontAwesome.Sharp.IconMenuItem();
             this.menuMaterias = new FontAwesome.Sharp.IconMenuItem();
             this.menuEstudiantes = new FontAwesome.Sharp.IconMenuItem();
             this.iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
+            this.menuTitulo = new System.Windows.Forms.MenuStrip();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.contenedor = new System.Windows.Forms.Panel();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,53 +52,9 @@
             this.iconMenuItem1});
             this.menu.Location = new System.Drawing.Point(0, 48);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(995, 71);
+            this.menu.Size = new System.Drawing.Size(1167, 71);
             this.menu.TabIndex = 0;
             this.menu.Text = "menuStrip1";
-            // 
-            // menuTitulo
-            // 
-            this.menuTitulo.AutoSize = false;
-            this.menuTitulo.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.menuTitulo.Location = new System.Drawing.Point(0, 0);
-            this.menuTitulo.Name = "menuTitulo";
-            this.menuTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuTitulo.Size = new System.Drawing.Size(995, 48);
-            this.menuTitulo.TabIndex = 1;
-            this.menuTitulo.Text = "menuStrip2";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(385, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(241, 26);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "SISTEMA DE NOTAS";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.lblUsuario.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(60, 14);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(59, 15);
-            this.lblUsuario.TabIndex = 4;
-            this.lblUsuario.Text = "lbusuario";
-            // 
-            // contenedor
-            // 
-            this.contenedor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contenedor.Location = new System.Drawing.Point(0, 119);
-            this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(995, 663);
-            this.contenedor.TabIndex = 5;
             // 
             // menuUsuarios
             // 
@@ -106,7 +62,7 @@
             this.menuUsuarios.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
             this.menuUsuarios.IconColor = System.Drawing.Color.Black;
             this.menuUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuUsuarios.IconSize = 40;
+            this.menuUsuarios.IconSize = 30;
             this.menuUsuarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuUsuarios.Name = "menuUsuarios";
             this.menuUsuarios.Size = new System.Drawing.Size(122, 67);
@@ -134,7 +90,7 @@
             this.menuMaterias.IconChar = FontAwesome.Sharp.IconChar.Book;
             this.menuMaterias.IconColor = System.Drawing.Color.Black;
             this.menuMaterias.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuMaterias.IconSize = 40;
+            this.menuMaterias.IconSize = 30;
             this.menuMaterias.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuMaterias.Name = "menuMaterias";
             this.menuMaterias.Size = new System.Drawing.Size(122, 67);
@@ -147,7 +103,7 @@
             this.menuEstudiantes.IconChar = FontAwesome.Sharp.IconChar.Person;
             this.menuEstudiantes.IconColor = System.Drawing.Color.Black;
             this.menuEstudiantes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuEstudiantes.IconSize = 40;
+            this.menuEstudiantes.IconSize = 35;
             this.menuEstudiantes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuEstudiantes.Name = "menuEstudiantes";
             this.menuEstudiantes.Size = new System.Drawing.Size(122, 67);
@@ -161,12 +117,47 @@
             this.iconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.PenClip;
             this.iconMenuItem1.IconColor = System.Drawing.Color.Black;
             this.iconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconMenuItem1.IconSize = 40;
+            this.iconMenuItem1.IconSize = 35;
             this.iconMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.iconMenuItem1.Name = "iconMenuItem1";
             this.iconMenuItem1.Size = new System.Drawing.Size(122, 67);
             this.iconMenuItem1.Text = "Notas";
             this.iconMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // menuTitulo
+            // 
+            this.menuTitulo.AutoSize = false;
+            this.menuTitulo.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.menuTitulo.Location = new System.Drawing.Point(0, 0);
+            this.menuTitulo.Name = "menuTitulo";
+            this.menuTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.menuTitulo.Size = new System.Drawing.Size(1167, 48);
+            this.menuTitulo.TabIndex = 1;
+            this.menuTitulo.Text = "menuStrip2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(470, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(241, 26);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "SISTEMA DE NOTAS";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.lblUsuario.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(60, 14);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(59, 15);
+            this.lblUsuario.TabIndex = 4;
+            this.lblUsuario.Text = "lbusuario";
             // 
             // btnSalir
             // 
@@ -180,7 +171,7 @@
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 30;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.Location = new System.Drawing.Point(850, 12);
+            this.btnSalir.Location = new System.Drawing.Point(1061, 12);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 6;
@@ -189,20 +180,27 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // contenedor
+            // 
+            this.contenedor.Location = new System.Drawing.Point(23, 122);
+            this.contenedor.Name = "contenedor";
+            this.contenedor.Size = new System.Drawing.Size(1132, 516);
+            this.contenedor.TabIndex = 7;
+            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(995, 782);
-            this.Controls.Add(this.btnSalir);
+            this.ClientSize = new System.Drawing.Size(1167, 650);
             this.Controls.Add(this.contenedor);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.menuTitulo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menu;
             this.Name = "FrmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -225,8 +223,8 @@
         private FontAwesome.Sharp.IconMenuItem menuMaterias;
         private FontAwesome.Sharp.IconMenuItem menuEstudiantes;
         private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Panel contenedor;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
         private FontAwesome.Sharp.IconButton btnSalir;
+        private System.Windows.Forms.Panel contenedor;
     }
 }

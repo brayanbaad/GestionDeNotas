@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="EstudianteService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
