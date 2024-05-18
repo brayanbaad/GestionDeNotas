@@ -9,31 +9,24 @@ using Entity;
 
 namespace BLL
 {
-    
-    public class EstudianteService
+    public class DocenteService
     {
         private ConnectionManager conexion;
-        private EstudianteRepository estudianteRepository;
-        List<Estudiante> estudiantes;
-        Estudiante estudiante;
-        public EstudianteService( string connectionString)
+        private DocenteRepository docenteRepository;
+        List<Docente> docentes;
+        public DocenteService(string connectionString)
         {
-           conexion = new ConnectionManager(connectionString);
-           estudianteRepository = new EstudianteRepository(conexion);
-          }
-
-        public EstudianteService()
-        {
-            
+            conexion = new ConnectionManager(connectionString);
+            docenteRepository = new DocenteRepository(conexion);
         }
 
-        public string Registrar(Estudiante estudiante)
+        public string Registrar(Docente docente)
         {
             try
             {
                 conexion.Open();
-                estudianteRepository.Registrar(estudiante);
-                return $"Los datos del estudiante {estudiante.Nombres} ha sido registrado con exito";
+                docenteRepository.Registrar(docente);
+                return $"Los datos del docente {docente.Nombres} ha sido registrado con exito";
             }
             catch (Exception e)
             {
@@ -46,14 +39,14 @@ namespace BLL
             }
         }
 
-        public List<Estudiante> Consultar()
+        public List<Docente> Consultar()
         {
             try
             {
-                estudiantes= new List<Estudiante>();
+                docentes = new List<Docente>();
                 conexion.Open();
-                estudiantes = estudianteRepository.Consultar();
-                return estudiantes;
+                docentes = docenteRepository.Consultar();
+                return docentes;
 
             }
             catch (Exception e)
@@ -67,14 +60,14 @@ namespace BLL
             return null;
         }
 
-        public Estudiante BuscarId(string identificacion)
+        public Docente BuscarId(string identificacion)
         {
             try
             {
                 conexion.Open();
-                estudiante = new Estudiante();
-                estudiante = estudianteRepository.BuscarId(identificacion);
-                return estudiante;
+                Docente docente = new Docente();
+                docente = docenteRepository.BuscarId(identificacion);
+                return docente;
             }
             catch (Exception e)
             {
@@ -87,12 +80,12 @@ namespace BLL
             return null;
         }
 
-         public  string Modificar(Estudiante estudiante)
+        public string Modificar(Docente docente)
         {
             try
             {
                 conexion.Open();
-                estudianteRepository.Modificar(estudiante);
+                docenteRepository.Modificar(docente);
                 return "Registro Modificado correctamente";
             }
             catch (Exception e)
@@ -111,7 +104,7 @@ namespace BLL
             try
             {
                 conexion.Open();
-                estudianteRepository.Eliminar(identificacion);
+                docenteRepository.Eliminar(identificacion);
                 return $"Los datos del estudiante han sido eliminados con exito";
             }
             catch (Exception e)
@@ -123,17 +116,17 @@ namespace BLL
             {
                 conexion.Close();
             }
-           
+
         }
-        public List<Estudiante> BuscarContiene(string nombre)
+        public List<Docente> BuscarContiene(string nombre)
         {
             try
             {
                 conexion.Open();
-                List<Estudiante> estudiantes;
-                estudiantes = estudianteRepository.BuscarContiene(nombre);
+                List<Docente> docentes;
+                docentes = docenteRepository.BuscarContiene(nombre);
 
-                return estudiantes;
+                return docentes;
             }
             catch (Exception e)
             {
@@ -144,15 +137,8 @@ namespace BLL
             {
                 conexion.Close();
             }
-            return estudiantes ;
+            return docentes;
 
         }
-
-
-
-
-
-
-
     }
 }

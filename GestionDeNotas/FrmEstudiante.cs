@@ -16,66 +16,35 @@ namespace GestionDeNotas
     public partial class FrmEstudiante : Form
     {
         EstudianteService estudianteService;
+        List<Estudiante> estudiantes;
         public FrmEstudiante()
         {
             InitializeComponent();
             estudianteService = new EstudianteService(ConfigConnection.connectionString);
+            dtgEstudiantes.DataSource = estudianteService.Consultar();
+            estudiantes = new List<Estudiante>();
 
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            dtgEstudiantes.DataSource = estudianteService.Consultar();
-
-        }
-
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            // Falta de validaciones de campos vacios y duplicado de identificación 
-            Estudiante estudiante = new Estudiante();
-            estudiante.Identificacion = txtIdentificacion.Text;
-            estudiante.Nombres = txtNombres.Text;
-            estudiante.Apellidos = txtApellidos.Text;
-            estudiante.FechaNacimiento = dtFecha.Text;
-            estudiante.Email = new MailAddress(txtCorreo.Text.Trim());
-            estudiante.Direccion = txtDireccion.Text;
-            estudiante.Telefono = txtTelefono.Text;
-            estudiante.Promedio = 0;
-            string mensaje = estudianteService.Registrar(estudiante);
-            MessageBox.Show(mensaje, "MENSAJE DE REGISTRO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            estudianteService = new EstudianteService(ConfigConnection.connectionString);
-            dtgEstudiantes.DataSource = estudianteService.Consultar();
-            Limpiar();
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            string identificacion = txtIdentificacion.Text;
-            if (identificacion != "")
+            string nombre = txtNombres.Text;
+            if (nombre != "")
             {
 
-                Estudiante estudiante = estudianteService.BuscarId(identificacion);
-                if (estudiante != null)
-                {
-                    estudiante.Nombres = txtNombres.Text;
-                    estudiante.Apellidos = txtApellidos.Text;
-                    estudiante.FechaNacimiento = dtFecha.Text;
-                    estudiante.Telefono = txtTelefono.Text;
-                    estudiante.Direccion = txtDireccion.Text;
-                    estudiante.Email = new MailAddress(txtCorreo.Text.ToString());
-                    var respuestaa = MessageBox.Show("Esta seguro que desea modificar al estudiante?", "", MessageBoxButtons.YesNo);
-                    if (respuestaa == DialogResult.Yes)
-                    {
-                        string mensaje = estudianteService.Modificar(estudiante);
-                        MessageBox.Show(mensaje, "Mensaje de Modificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        estudianteService = new EstudianteService(ConfigConnection.connectionString);
-                        dtgEstudiantes.DataSource = estudianteService.Consultar();
-                        Limpiar();
-                    }
-
-                }
+                EstudianteService estudianteService = new EstudianteService(ConfigConnection.connectionString);
+                dtgEstudiantes.DataSource = estudianteService.BuscarContiene(txtNombreBuscar.Text);
             }
+            else
+            {
+                MessageBox.Show("Digite la cedula a consultar");
+                txtNombreBuscar.Focus();
+            }
+            
+
         }
+
+
 
         private void Limpiar()
         {
@@ -127,7 +96,54 @@ namespace GestionDeNotas
             txtTelefono.Text = dtgEstudiantes.CurrentRow.Cells[7].Value.ToString();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnIconRegistrar_Click(object sender, EventArgs e)
+        {
+            Estudiante estudiante = new Estudiante();
+            estudiante.Identificacion = txtIdentificacion.Text;
+            estudiante.Nombres = txtNombres.Text;
+            estudiante.Apellidos = txtApellidos.Text;
+            estudiante.FechaNacimiento = dtFecha.Text;
+            estudiante.Email = new MailAddress(txtCorreo.Text.Trim());
+            estudiante.Direccion = txtDireccion.Text;
+            estudiante.Telefono = txtTelefono.Text;
+            estudiante.Promedio = 0;
+            string mensaje = estudianteService.Registrar(estudiante);
+            MessageBox.Show(mensaje, "MENSAJE DE REGISTRO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            estudianteService = new EstudianteService(ConfigConnection.connectionString);
+            dtgEstudiantes.DataSource = estudianteService.Consultar();
+            Limpiar();
+        }
+
+        private void btnIconModificar_Click(object sender, EventArgs e)
+        {
+            string identificacion = txtIdentificacion.Text;
+            if (identificacion != "")
+            {
+
+                Estudiante estudiante = estudianteService.BuscarId(identificacion);
+                if (estudiante != null)
+                {
+                    estudiante.Nombres = txtNombres.Text;
+                    estudiante.Apellidos = txtApellidos.Text;
+                    estudiante.FechaNacimiento = dtFecha.Text;
+                    estudiante.Telefono = txtTelefono.Text;
+                    estudiante.Direccion = txtDireccion.Text;
+                    estudiante.Email = new MailAddress(txtCorreo.Text.ToString());
+                    var respuestaa = MessageBox.Show("Esta seguro que desea modificar al estudiante?", "", MessageBoxButtons.YesNo);
+                    if (respuestaa == DialogResult.Yes)
+                    {
+                        string mensaje = estudianteService.Modificar(estudiante);
+                        MessageBox.Show(mensaje, "Mensaje de Modificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        estudianteService = new EstudianteService(ConfigConnection.connectionString);
+                        dtgEstudiantes.DataSource = estudianteService.Consultar();
+                        Limpiar();
+                    }
+
+                }
+            }
+        }
+
+        private void btnIconEliminar_Click(object sender, EventArgs e)
         {
             string identificacion = txtIdentificacion.Text;
             if (identificacion != "")
@@ -153,20 +169,16 @@ namespace GestionDeNotas
             }
             else
             {
-                MessageBox.Show("Digite la identifiacion del estudiante que desea buscar, por favor");
+                MessageBox.Show("Digite la identifiacion del docente que desea buscar, por favor");
                 txtIdentificacion.Focus();
             }
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
+        private void btnIconLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
         }
 
-        private void txtPalabraClave_KeyDown(object sender, KeyEventArgs e)
-        {
-            string dato = "%"+txtPalabraClave.Text+"%";
-            estudianteService.BuscarPalabra(dato);
-        }
+        
     }
 }

@@ -113,7 +113,12 @@ namespace DAL
             return estudiante;
         }
 
-        
+        public List<Estudiante> BuscarContiene(string nombre)
+        {
+            estudiantes = Consultar();
+            return estudiantes.Where(p => p.Nombres.Contains(nombre)).ToList();
+        }
+
 
     }
 }
