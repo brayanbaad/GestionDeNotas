@@ -50,7 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DocenteService.cs" />
+    <Compile Include="EspecialidadService.cs" />
     <Compile Include="EstudianteService.cs" />
+    <Compile Include="GradoService.cs" />
+    <Compile Include="MatriculaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioService.cs" />
   </ItemGroup>

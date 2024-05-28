@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|c:\\users\\brayan\\source\\repos\\gestiondenotas\\gestiondenotas\\frmdocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|solutionrelative:gestiondenotas\\frmdocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|c:\\users\\brayan\\source\\repos\\gestiondenotas\\gestiondenotas\\frmestudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|solutionrelative:gestiondenotas\\frmestudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|c:\\users\\brayan\\source\\repos\\gestiondenotas\\gestiondenotas\\frmestudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|solutionrelative:gestiondenotas\\frmestudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|c:\\users\\brayan\\source\\repos\\gestiondenotas\\gestiondenotas\\frmdocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5B826A3C-6585-42C3-BA9F-46D66EC824F2}|GestionDeNotas\\Presentacion.csproj|solutionrelative:gestiondenotas\\frmdocentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{428CFEE5-3DAB-45ED-B16B-B55A8C95529F}|DAL\\DAL.csproj|c:\\users\\brayan\\source\\repos\\gestiondenotas\\dal\\docenterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{428CFEE5-3DAB-45ED-B16B-B55A8C95529F}|DAL\\DAL.csproj|solutionrelative:dal\\docenterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,51 +23,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FrmEstudiante.cs",
-              "DocumentMoniker": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmEstudiante.cs",
-              "RelativeDocumentMoniker": "GestionDeNotas\\FrmEstudiante.cs",
-              "ToolTip": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmEstudiante.cs",
-              "RelativeToolTip": "GestionDeNotas\\FrmEstudiante.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAswB4AAAAMAAAA",
+              "Title": "DocenteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\DAL\\DocenteRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\DocenteRepository.cs",
+              "ToolTip": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\DAL\\DocenteRepository.cs",
+              "RelativeToolTip": "DAL\\DocenteRepository.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAEkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-18T00:51:03.572Z",
+              "WhenOpened": "2024-05-28T04:43:37.565Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FrmDocentes.cs",
-              "DocumentMoniker": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmDocentes.cs",
-              "RelativeDocumentMoniker": "GestionDeNotas\\FrmDocentes.cs",
-              "ToolTip": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmDocentes.cs",
-              "RelativeToolTip": "GestionDeNotas\\FrmDocentes.cs",
-              "ViewState": "AQIAAJUAAAAAAAAAAADwv6AAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-18T00:50:57.139Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmEstudiante.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmEstudiante.cs",
-              "RelativeDocumentMoniker": "GestionDeNotas\\FrmEstudiante.cs",
-              "ToolTip": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmEstudiante.cs [Dise\u00F1o]",
-              "RelativeToolTip": "GestionDeNotas\\FrmEstudiante.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-18T00:51:00.727Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "FrmDocentes.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmDocentes.cs",
               "RelativeDocumentMoniker": "GestionDeNotas\\FrmDocentes.cs",
               "ToolTip": "C:\\Users\\Brayan\\source\\repos\\GestionDeNotas\\GestionDeNotas\\FrmDocentes.cs [Dise\u00F1o]",
               "RelativeToolTip": "GestionDeNotas\\FrmDocentes.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-18T00:41:03.918Z",
+              "WhenOpened": "2024-05-28T04:43:00.302Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

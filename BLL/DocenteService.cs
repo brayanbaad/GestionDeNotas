@@ -14,6 +14,7 @@ namespace BLL
         private ConnectionManager conexion;
         private DocenteRepository docenteRepository;
         List<Docente> docentes;
+        List<Especialidad> especialidades;
         public DocenteService(string connectionString)
         {
             conexion = new ConnectionManager(connectionString);
@@ -140,5 +141,6 @@ namespace BLL
             return docentes;
 
         }
+        
     }
 }

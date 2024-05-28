@@ -30,30 +30,31 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbEspecialidad = new System.Windows.Forms.ComboBox();
+            this.btnIconLimpiar = new FontAwesome.Sharp.IconButton();
+            this.btnIconEliminar = new FontAwesome.Sharp.IconButton();
+            this.btnIconModificar = new FontAwesome.Sharp.IconButton();
+            this.btnIconRegistrar = new FontAwesome.Sharp.IconButton();
+            this.btnIconBuscar = new FontAwesome.Sharp.IconButton();
+            this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtEpecialidad = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.dtFechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtIdentificacion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dtgDocentes = new System.Windows.Forms.DataGridView();
-            this.txtApellidos = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnIconBuscar = new FontAwesome.Sharp.IconButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtIdentificacionBuscar = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtNombreBuscar = new System.Windows.Forms.TextBox();
-            this.btnConsultar = new System.Windows.Forms.Button();
-            this.btnIconRegistrar = new FontAwesome.Sharp.IconButton();
-            this.btnIconModificar = new FontAwesome.Sharp.IconButton();
-            this.btnIconEliminar = new FontAwesome.Sharp.IconButton();
-            this.btnIconLimpiar = new FontAwesome.Sharp.IconButton();
+            this.dtgDocentes = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDocentes)).BeginInit();
@@ -71,6 +72,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox1.Controls.Add(this.cmbEspecialidad);
             this.groupBox1.Controls.Add(this.btnIconLimpiar);
             this.groupBox1.Controls.Add(this.btnIconEliminar);
             this.groupBox1.Controls.Add(this.btnIconModificar);
@@ -79,7 +81,6 @@
             this.groupBox1.Controls.Add(this.txtApellidos);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtDireccion);
-            this.groupBox1.Controls.Add(this.txtEpecialidad);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -97,6 +98,134 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion Personal";
             // 
+            // cmbEspecialidad
+            // 
+            this.cmbEspecialidad.FormattingEnabled = true;
+            this.cmbEspecialidad.Items.AddRange(new object[] {
+            "SELECCIONE"});
+            this.cmbEspecialidad.Location = new System.Drawing.Point(644, 65);
+            this.cmbEspecialidad.Name = "cmbEspecialidad";
+            this.cmbEspecialidad.Size = new System.Drawing.Size(121, 21);
+            this.cmbEspecialidad.TabIndex = 22;
+            // 
+            // btnIconLimpiar
+            // 
+            this.btnIconLimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            this.btnIconLimpiar.IconColor = System.Drawing.Color.Black;
+            this.btnIconLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnIconLimpiar.IconSize = 20;
+            this.btnIconLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnIconLimpiar.Location = new System.Drawing.Point(832, 142);
+            this.btnIconLimpiar.Name = "btnIconLimpiar";
+            this.btnIconLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnIconLimpiar.TabIndex = 21;
+            this.btnIconLimpiar.Text = "Limpiar";
+            this.btnIconLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIconLimpiar.UseVisualStyleBackColor = true;
+            this.btnIconLimpiar.Click += new System.EventHandler(this.btnIconLimpiar_Click);
+            // 
+            // btnIconEliminar
+            // 
+            this.btnIconEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnIconEliminar.IconColor = System.Drawing.Color.Black;
+            this.btnIconEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnIconEliminar.IconSize = 20;
+            this.btnIconEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnIconEliminar.Location = new System.Drawing.Point(832, 104);
+            this.btnIconEliminar.Name = "btnIconEliminar";
+            this.btnIconEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnIconEliminar.TabIndex = 20;
+            this.btnIconEliminar.Text = "Eliminar";
+            this.btnIconEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIconEliminar.UseVisualStyleBackColor = true;
+            this.btnIconEliminar.Click += new System.EventHandler(this.btnIconEliminar_Click);
+            // 
+            // btnIconModificar
+            // 
+            this.btnIconModificar.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
+            this.btnIconModificar.IconColor = System.Drawing.Color.Black;
+            this.btnIconModificar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnIconModificar.IconSize = 20;
+            this.btnIconModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnIconModificar.Location = new System.Drawing.Point(832, 65);
+            this.btnIconModificar.Name = "btnIconModificar";
+            this.btnIconModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnIconModificar.TabIndex = 19;
+            this.btnIconModificar.Text = "Modificar";
+            this.btnIconModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIconModificar.UseVisualStyleBackColor = true;
+            this.btnIconModificar.Click += new System.EventHandler(this.btnIconModificar_Click);
+            // 
+            // btnIconRegistrar
+            // 
+            this.btnIconRegistrar.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.btnIconRegistrar.IconColor = System.Drawing.Color.Black;
+            this.btnIconRegistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnIconRegistrar.IconSize = 20;
+            this.btnIconRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnIconRegistrar.Location = new System.Drawing.Point(832, 26);
+            this.btnIconRegistrar.Name = "btnIconRegistrar";
+            this.btnIconRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnIconRegistrar.TabIndex = 18;
+            this.btnIconRegistrar.Text = "Registrar";
+            this.btnIconRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIconRegistrar.UseVisualStyleBackColor = true;
+            this.btnIconRegistrar.Click += new System.EventHandler(this.btnIconRegistrar_Click);
+            // 
+            // btnIconBuscar
+            // 
+            this.btnIconBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnIconBuscar.IconColor = System.Drawing.Color.Black;
+            this.btnIconBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnIconBuscar.IconSize = 20;
+            this.btnIconBuscar.Location = new System.Drawing.Point(229, 26);
+            this.btnIconBuscar.Name = "btnIconBuscar";
+            this.btnIconBuscar.Size = new System.Drawing.Size(37, 25);
+            this.btnIconBuscar.TabIndex = 17;
+            this.btnIconBuscar.UseVisualStyleBackColor = true;
+            this.btnIconBuscar.Click += new System.EventHandler(this.btnIconBuscar_Click);
+            // 
+            // txtApellidos
+            // 
+            this.txtApellidos.Location = new System.Drawing.Point(629, 28);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(165, 20);
+            this.txtApellidos.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(553, 70);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Especialidad:";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(296, 70);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(239, 20);
+            this.txtDireccion.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(235, 70);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Direccion:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(571, 28);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Apellidos:";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -113,31 +242,6 @@
             this.txtTelefono.Size = new System.Drawing.Size(150, 20);
             this.txtTelefono.TabIndex = 10;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(553, 70);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Especialidad:";
-            // 
-            // txtEpecialidad
-            // 
-            this.txtEpecialidad.Location = new System.Drawing.Point(629, 70);
-            this.txtEpecialidad.Name = "txtEpecialidad";
-            this.txtEpecialidad.Size = new System.Drawing.Size(165, 20);
-            this.txtEpecialidad.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(235, 70);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Direccion:";
-            // 
             // dtFechaNacimiento
             // 
             this.dtFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -145,13 +249,6 @@
             this.dtFechaNacimiento.Name = "dtFechaNacimiento";
             this.dtFechaNacimiento.Size = new System.Drawing.Size(106, 20);
             this.dtFechaNacimiento.TabIndex = 6;
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Location = new System.Drawing.Point(296, 70);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(239, 20);
-            this.txtDireccion.TabIndex = 5;
             // 
             // label3
             // 
@@ -197,7 +294,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.groupBox2.Controls.Add(this.btnConsultar);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.txtIdentificacionBuscar);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.txtNombreBuscar);
             this.groupBox2.Controls.Add(this.dtgDocentes);
@@ -207,48 +305,27 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
-            // dtgDocentes
+            // label9
             // 
-            this.dtgDocentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDocentes.Location = new System.Drawing.Point(38, 45);
-            this.dtgDocentes.Name = "dtgDocentes";
-            this.dtgDocentes.Size = new System.Drawing.Size(859, 231);
-            this.dtgDocentes.TabIndex = 0;
-            this.dtgDocentes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDocentes_CellDoubleClick);
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(369, 19);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(112, 13);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Identificacion  Buscar:";
             // 
-            // txtApellidos
+            // txtIdentificacionBuscar
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(629, 28);
-            this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(165, 20);
-            this.txtApellidos.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(571, 28);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Apellidos:";
-            // 
-            // btnIconBuscar
-            // 
-            this.btnIconBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnIconBuscar.IconColor = System.Drawing.Color.Black;
-            this.btnIconBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnIconBuscar.IconSize = 20;
-            this.btnIconBuscar.Location = new System.Drawing.Point(229, 26);
-            this.btnIconBuscar.Name = "btnIconBuscar";
-            this.btnIconBuscar.Size = new System.Drawing.Size(37, 25);
-            this.btnIconBuscar.TabIndex = 17;
-            this.btnIconBuscar.UseVisualStyleBackColor = true;
-            this.btnIconBuscar.Click += new System.EventHandler(this.btnIconBuscar_Click);
+            this.txtIdentificacionBuscar.Location = new System.Drawing.Point(487, 19);
+            this.txtIdentificacionBuscar.Name = "txtIdentificacionBuscar";
+            this.txtIdentificacionBuscar.Size = new System.Drawing.Size(150, 20);
+            this.txtIdentificacionBuscar.TabIndex = 14;
+            this.txtIdentificacionBuscar.TextChanged += new System.EventHandler(this.txtIdentificacionBuscar_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(122, 22);
+            this.label8.Location = new System.Drawing.Point(84, 19);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 13);
             this.label8.TabIndex = 13;
@@ -256,84 +333,20 @@
             // 
             // txtNombreBuscar
             // 
-            this.txtNombreBuscar.Location = new System.Drawing.Point(229, 19);
+            this.txtNombreBuscar.Location = new System.Drawing.Point(173, 19);
             this.txtNombreBuscar.Name = "txtNombreBuscar";
             this.txtNombreBuscar.Size = new System.Drawing.Size(150, 20);
             this.txtNombreBuscar.TabIndex = 12;
+            this.txtNombreBuscar.TextChanged += new System.EventHandler(this.txtNombreBuscar_TextChanged);
             // 
-            // btnConsultar
+            // dtgDocentes
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(434, 12);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(75, 23);
-            this.btnConsultar.TabIndex = 17;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
-            // btnIconRegistrar
-            // 
-            this.btnIconRegistrar.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
-            this.btnIconRegistrar.IconColor = System.Drawing.Color.Black;
-            this.btnIconRegistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnIconRegistrar.IconSize = 20;
-            this.btnIconRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnIconRegistrar.Location = new System.Drawing.Point(832, 26);
-            this.btnIconRegistrar.Name = "btnIconRegistrar";
-            this.btnIconRegistrar.Size = new System.Drawing.Size(75, 23);
-            this.btnIconRegistrar.TabIndex = 18;
-            this.btnIconRegistrar.Text = "Registrar";
-            this.btnIconRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIconRegistrar.UseVisualStyleBackColor = true;
-            this.btnIconRegistrar.Click += new System.EventHandler(this.btnIconRegistrar_Click);
-            // 
-            // btnIconModificar
-            // 
-            this.btnIconModificar.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
-            this.btnIconModificar.IconColor = System.Drawing.Color.Black;
-            this.btnIconModificar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnIconModificar.IconSize = 20;
-            this.btnIconModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnIconModificar.Location = new System.Drawing.Point(832, 65);
-            this.btnIconModificar.Name = "btnIconModificar";
-            this.btnIconModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnIconModificar.TabIndex = 19;
-            this.btnIconModificar.Text = "Modificar";
-            this.btnIconModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIconModificar.UseVisualStyleBackColor = true;
-            this.btnIconModificar.Click += new System.EventHandler(this.btnIconModificar_Click);
-            // 
-            // btnIconEliminar
-            // 
-            this.btnIconEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.btnIconEliminar.IconColor = System.Drawing.Color.Black;
-            this.btnIconEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnIconEliminar.IconSize = 20;
-            this.btnIconEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnIconEliminar.Location = new System.Drawing.Point(832, 104);
-            this.btnIconEliminar.Name = "btnIconEliminar";
-            this.btnIconEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnIconEliminar.TabIndex = 20;
-            this.btnIconEliminar.Text = "Eliminar";
-            this.btnIconEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIconEliminar.UseVisualStyleBackColor = true;
-            this.btnIconEliminar.Click += new System.EventHandler(this.btnIconEliminar_Click);
-            // 
-            // btnIconLimpiar
-            // 
-            this.btnIconLimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            this.btnIconLimpiar.IconColor = System.Drawing.Color.Black;
-            this.btnIconLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnIconLimpiar.IconSize = 20;
-            this.btnIconLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnIconLimpiar.Location = new System.Drawing.Point(832, 142);
-            this.btnIconLimpiar.Name = "btnIconLimpiar";
-            this.btnIconLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.btnIconLimpiar.TabIndex = 21;
-            this.btnIconLimpiar.Text = "Limpiar";
-            this.btnIconLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIconLimpiar.UseVisualStyleBackColor = true;
-            this.btnIconLimpiar.Click += new System.EventHandler(this.btnIconLimpiar_Click);
+            this.dtgDocentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDocentes.Location = new System.Drawing.Point(38, 45);
+            this.dtgDocentes.Name = "dtgDocentes";
+            this.dtgDocentes.Size = new System.Drawing.Size(847, 231);
+            this.dtgDocentes.TabIndex = 0;
+            this.dtgDocentes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDocentes_CellDoubleClick);
             // 
             // FrmDocentes
             // 
@@ -346,6 +359,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmDocentes";
             this.Text = "FrmConsultaUsuarios";
+            this.Load += new System.EventHandler(this.FrmDocentes_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -368,7 +382,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtEpecialidad;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dtFechaNacimiento;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -376,12 +389,14 @@
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.Label label7;
         private FontAwesome.Sharp.IconButton btnIconBuscar;
-        private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtNombreBuscar;
         private FontAwesome.Sharp.IconButton btnIconLimpiar;
         private FontAwesome.Sharp.IconButton btnIconEliminar;
         private FontAwesome.Sharp.IconButton btnIconModificar;
         private FontAwesome.Sharp.IconButton btnIconRegistrar;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtIdentificacionBuscar;
+        private System.Windows.Forms.ComboBox cmbEspecialidad;
     }
 }

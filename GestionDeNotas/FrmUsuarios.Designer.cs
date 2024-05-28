@@ -118,13 +118,13 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "SELECCIONE",
             "ADMINISTRADOR",
             "DOCENTE"});
             this.comboBox1.Location = new System.Drawing.Point(549, 29);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(148, 21);
             this.comboBox1.TabIndex = 3;
+            this.comboBox1.Text = "SELECCIONE";
             // 
             // label3
             // 

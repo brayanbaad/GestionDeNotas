@@ -9,8 +9,8 @@ namespace Entity
 {
     public class Docente
     {
-        public int Id { get; set; }
-        public string Identificacion { get; set; }
+        public int Item { get; set; }
+        public string IdDocente { get; set; }
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
         public string FechaNacimiento { get; set; }

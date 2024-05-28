@@ -61,11 +61,23 @@
     <Compile Include="FrmDocentes.Designer.cs">
       <DependentUpon>FrmDocentes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEspecialidad.Designer.cs">
+      <DependentUpon>FrmEspecialidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEstudiante.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmEstudiante.Designer.cs">
       <DependentUpon>FrmEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMatricula.Designer.cs">
+      <DependentUpon>FrmMatricula.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmInicio.cs">
       <SubType>Form</SubType>
@@ -90,8 +102,14 @@
     <EmbeddedResource Include="FrmDocentes.resx">
       <DependentUpon>FrmDocentes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmEspecialidad.resx">
+      <DependentUpon>FrmEspecialidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEstudiante.resx">
       <DependentUpon>FrmEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMatricula.resx">
+      <DependentUpon>FrmMatricula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>

@@ -20,3 +20,5 @@ C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNo
 C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNotas.FrmDocentes.resources
 C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNotas.FrmUsuarios.resources
 C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNotas.FrmEstudiante.resources
+C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNotas.FrmEspecialidad.resources
+C:\Users\Brayan\source\repos\GestionDeNotas\GestionDeNotas\obj\Debug\GestionDeNotas.FrmMatricula.resources

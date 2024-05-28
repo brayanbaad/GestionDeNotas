@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Net.Mail;
@@ -22,16 +23,16 @@ namespace DAL
         {
             using ( var comando = connection.CreateCommand())
             {
-                comando.CommandText = " Insert  Into estudiante (identificacion,nombres,apellidos,correo,fechaNacimiento,direccion,telefono,promedio)" +
-                   "Values(@identificacion,@nombres,@apellidos,@correo,@fechaNacimiento,@direccion,@telefono,@promedio)";
-                comando.Parameters.AddWithValue("@identificacion", estudiante.Identificacion);
+                comando.CommandText = "sp_crud_estudiante ";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@intProceso", 2);
+                comando.Parameters.AddWithValue("@idEstudiante", estudiante.IdEstudiante);
                 comando.Parameters.AddWithValue("@nombres", estudiante.Nombres);
                 comando.Parameters.AddWithValue("@apellidos", estudiante.Apellidos);
                 comando.Parameters.AddWithValue("@correo", estudiante.Email.Address);
                 comando.Parameters.AddWithValue("@fechaNacimiento", estudiante.FechaNacimiento);
                 comando.Parameters.AddWithValue("@direccion", estudiante.Direccion);
                 comando.Parameters.AddWithValue("@telefono", estudiante.Telefono);
-                comando.Parameters.AddWithValue("@promedio", estudiante.Promedio);
                 comando.ExecuteNonQuery();
             }
         }
@@ -40,8 +41,10 @@ namespace DAL
         {
             using (var comando = connection.CreateCommand())
             {
-                comando.CommandText = "Update estudiante set  nombres=@nombres,apellidos=@apellidos,correo=@correo,fechaNacimiento=@fechaNacimiento,direccion=@direccion,telefono=@telefono where identificacion = @identificacion";
-                comando.Parameters.AddWithValue("@identificacion", estudiante.Identificacion);
+                comando.CommandText = "sp_crud_estudiante";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@intProceso", 3);
+                comando.Parameters.AddWithValue("@idEstudiante", estudiante.IdEstudiante);
                 comando.Parameters.AddWithValue("@nombres", estudiante.Nombres);
                 comando.Parameters.AddWithValue("@apellidos", estudiante.Apellidos);
                 comando.Parameters.AddWithValue("@correo", estudiante.Email.Address);
@@ -54,69 +57,83 @@ namespace DAL
 
         public void Eliminar(string identificacion)
         {
-            using ( var comanddo = connection.CreateCommand())
+            using ( var comando = connection.CreateCommand())
             {
-                comanddo.CommandText = " delete from estudiante where identificacion = @identificacion";
-                comanddo.Parameters.AddWithValue("@identificacion", identificacion);
-                comanddo.ExecuteNonQuery();
+                comando.CommandText = "sp_crud_estudiante";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@intProceso", 4);
+                comando.Parameters.AddWithValue("@idEstudiante", identificacion);
+                comando.ExecuteNonQuery();
             }
         }
         public List<Estudiante> Consultar()
         {
             using (var comando = connection.CreateCommand())
             {
-                comando.CommandText = "Select * from estudiante";
-                var Reader = comando.ExecuteReader();
-                while (Reader.Read())
-                {
-                    Estudiante estudiante = new Estudiante();
-                    estudiante = Mapear(Reader);
-                    estudiantes.Add(estudiante);
+                comando.CommandText = "sp_crud_estudiante";
+                comando.CommandType = CommandType.StoredProcedure;
+                // Añadir todos los parámetros necesarios
+                comando.Parameters.AddWithValue("@intProceso", 1);
+                comando.Parameters.AddWithValue("@item", DBNull.Value);
+                comando.Parameters.AddWithValue("@idEstudiante", DBNull.Value);
+                comando.Parameters.AddWithValue("@nombres", DBNull.Value);
+                comando.Parameters.AddWithValue("@apellidos", DBNull.Value);
+                comando.Parameters.AddWithValue("@correo", DBNull.Value);
+                comando.Parameters.AddWithValue("@fechaNacimiento", DBNull.Value);
+                comando.Parameters.AddWithValue("@direccion", DBNull.Value);
+                comando.Parameters.AddWithValue("@telefono", DBNull.Value);
 
-                }
-            }
-            return estudiantes;
-        }
-
-        public Estudiante BuscarId(string identificacion)
-        {
-            using (var Comando = connection.CreateCommand())
-            {
-                Comando.CommandText = "Select * from estudiante where identificacion =@identificacion";
-                Comando.Parameters.AddWithValue("@identificacion", identificacion);
-                var Reader = Comando.ExecuteReader();
-                if (Reader.HasRows)
+                using (var reader = comando.ExecuteReader())
                 {
-                    while (Reader.Read())
+                    while (reader.Read())
                     {
-                        Estudiante estudiante  = new Estudiante();
-                        estudiante = Mapear(Reader);
-                        return estudiante;
+                        var estudiante = Mapear(reader);
+                        estudiantes.Add(estudiante);
                     }
                 }
             }
-            return null;
+            
+            return estudiantes;
         }
 
+        
         public Estudiante Mapear(SqlDataReader reader)
         {
-            Estudiante estudiante = new Estudiante();
-            estudiante.Id = Convert.ToInt32(reader["ID"]);
-            estudiante.Identificacion = (string)reader["identificacion"];
-            estudiante.Nombres = (string)reader["nombres"];
-            estudiante.Apellidos = (string)reader["apellidos"];
-            estudiante.Email = new MailAddress((string)reader["correo"]);
-            estudiante.FechaNacimiento = (string)reader["fechaNacimiento"];
-            estudiante.Telefono = (string)reader["telefono"];
-            estudiante.Direccion = (string)reader["direccion"];
-            estudiante.Promedio = Convert.ToDecimal(reader["promedio"]);
+            
+            var estudiante = new Estudiante
+            {
+                Item = reader.GetInt32(reader.GetOrdinal("item")),
+                IdEstudiante = reader.GetString(reader.GetOrdinal("idEstudiante")),
+                Nombres = reader.GetString(reader.GetOrdinal("nombres")),
+                Apellidos = reader.GetString(reader.GetOrdinal("apellidos")),
+                Email = new MailAddress(reader.GetString(reader.GetOrdinal("correo"))),
+                FechaNacimiento = reader.GetString(reader.GetOrdinal("fechaNacimiento")),
+                Telefono = reader.GetString(reader.GetOrdinal("telefono")),
+                Direccion = reader.GetString(reader.GetOrdinal("direccion")),
+                
+            };
             return estudiante;
         }
 
         public List<Estudiante> BuscarContiene(string nombre)
         {
             estudiantes = Consultar();
-            return estudiantes.Where(p => p.Nombres.Contains(nombre)).ToList();
+            if (nombre =="")
+            {
+                return estudiantes;
+            }
+            else
+            {
+                return estudiantes.Where(estu => estu.IdEstudiante.Contains(nombre) || estu.Nombres.ToLower().Contains(nombre.ToLower())).ToList();
+            }
+        }
+
+        public Estudiante BuscarId(string identificacion)
+        {
+
+            estudiantes = Consultar();
+            return estudiantes.Where(estu => estu.IdEstudiante.Equals(identificacion)).FirstOrDefault();
+            
         }
 
 

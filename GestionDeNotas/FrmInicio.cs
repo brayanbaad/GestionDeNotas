@@ -68,9 +68,14 @@ namespace GestionDeNotas
             Application.Exit();
         }
 
-        private void contenedor_Paint(object sender, PaintEventArgs e)
+        private void menuEspecialidades_Click(object sender, EventArgs e)
         {
+            AbrirFormulario((IconMenuItem)sender, new FrmEspecialidad());
+        }
 
+        private void menuMatricula_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconMenuItem)sender, new FrmMatricula());
         }
     }
 }

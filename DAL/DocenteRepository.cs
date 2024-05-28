@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Entity;
 using System.Net.Mail;
+using System.Data;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace DAL
 {
@@ -13,19 +15,22 @@ namespace DAL
     {
         SqlConnection connection;
         List<Docente> docentes;
+        List<Especialidad> especialidades;
         public DocenteRepository(ConnectionManager Connection) {
 
             connection = Connection.connection;
             docentes = new List<Docente>();
+            especialidades = new List<Especialidad>();
         }
 
         public void Registrar(Docente docente)
         {
             using (var comando = connection.CreateCommand())
             {
-                comando.CommandText = " Insert  Into docente (identificacion,nombres,apellidos,fechaNacimiento,direccion,especialidad,telefono)" +
-                   "Values(@identificacion,@nombres,@apellidos,@fechaNacimiento,@direccion,@especialidad,@telefono)";
-                comando.Parameters.AddWithValue("@identificacion", docente.Identificacion);
+                comando.CommandText = "sp_crud_docente";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@intProceso", 2);
+                comando.Parameters.AddWithValue("@idDocente", docente.IdDocente);
                 comando.Parameters.AddWithValue("@nombres", docente.Nombres);
                 comando.Parameters.AddWithValue("@apellidos", docente.Apellidos);
                 comando.Parameters.AddWithValue("@fechaNacimiento", docente.FechaNacimiento);
@@ -40,8 +45,10 @@ namespace DAL
         {
             using (var comando = connection.CreateCommand())
             {
-                comando.CommandText = "Update docente set  nombres=@nombres,apellidos=@apellidos,fechaNacimiento=@fechaNacimiento,direccion=@direccion,especialidad=@especialidad,telefono=@telefono where identificacion = @identificacion";
-                comando.Parameters.AddWithValue("@identificacion", docente.Identificacion);
+                comando.CommandText = "sp_crud_docente";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@intProceso", 3);
+                comando.Parameters.AddWithValue("@idDocente", docente.IdDocente);
                 comando.Parameters.AddWithValue("@nombres", docente.Nombres);
                 comando.Parameters.AddWithValue("@apellidos", docente.Apellidos);
                 comando.Parameters.AddWithValue("@fechaNacimiento", docente.FechaNacimiento);
@@ -54,18 +61,31 @@ namespace DAL
 
         public void Eliminar(string identificacion)
         {
-            using (var comanddo = connection.CreateCommand())
+            using (var comando = connection.CreateCommand())
             {
-                comanddo.CommandText = " delete from docente where identificacion = @identificacion";
-                comanddo.Parameters.AddWithValue("@identificacion", identificacion);
-                comanddo.ExecuteNonQuery();
+                comando.CommandText = "sp_crud_docente";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@intProceso", 4);
+                comando.Parameters.AddWithValue("@idDocente", identificacion);
+                comando.ExecuteNonQuery();
             }
         }
         public List<Docente> Consultar()
         {
             using (var comando = connection.CreateCommand())
             {
-                comando.CommandText = "Select * from docente";
+                comando.CommandText = "sp_crud_docente";
+                comando.CommandType = CommandType.StoredProcedure;
+                // Añadir todos los parámetros necesarios
+                comando.Parameters.AddWithValue("@intProceso", 1);
+                comando.Parameters.AddWithValue("@item", DBNull.Value);
+                comando.Parameters.AddWithValue("@idDocente", DBNull.Value);
+                comando.Parameters.AddWithValue("@nombres", DBNull.Value);
+                comando.Parameters.AddWithValue("@apellidos", DBNull.Value);
+                comando.Parameters.AddWithValue("@fechaNacimiento", DBNull.Value);
+                comando.Parameters.AddWithValue("@direccion", DBNull.Value);
+                comando.Parameters.AddWithValue("@especialidad", DBNull.Value);
+                comando.Parameters.AddWithValue("@telefono", DBNull.Value);
                 var Reader = comando.ExecuteReader();
                 while (Reader.Read())
                 {
@@ -78,45 +98,54 @@ namespace DAL
             return docentes;
         }
 
-        public Docente BuscarId(string identificacion)
-        {
-            using (var Comando = connection.CreateCommand())
-            {
-                Comando.CommandText = "Select * from docente where identificacion =@identificacion";
-                Comando.Parameters.AddWithValue("@identificacion", identificacion);
-                var Reader = Comando.ExecuteReader();
-                if (Reader.HasRows)
-                {
-                    while (Reader.Read())
-                    {
-                        Docente docente = new Docente();
-                        docente = Mapear(Reader);
-                        return docente;
-                    }
-                }
-            }
-            return null;
-        }
+       
 
         public Docente Mapear(SqlDataReader reader)
         {
-            Docente docente = new Docente();
-            docente.Id = Convert.ToInt32(reader["ID"]);
-            docente.Identificacion = (string)reader["identificacion"];
-            docente.Nombres = (string)reader["nombres"];
-            docente.Apellidos = (string)reader["apellidos"];
-            docente.FechaNacimiento = (string)reader["fechaNacimiento"];
-            docente.Direccion = (string)reader["direccion"];
-            docente.Especialidad = (string)reader["especialidad"];
-            docente.Telefono = (string)reader["telefono"];
+            var docente = new Docente
+            {
+                Item = reader.GetInt32(reader.GetOrdinal("item")),
+                IdDocente = reader.GetString(reader.GetOrdinal("idDocente")),
+                Nombres = reader.GetString(reader.GetOrdinal("nombres")),
+                Apellidos = reader.GetString(reader.GetOrdinal("apellidos")),
+                FechaNacimiento = reader.GetString(reader.GetOrdinal("fechaNacimiento")),
+                Direccion = reader.GetString(reader.GetOrdinal("direccion")),
+                Especialidad = reader.GetString(reader.GetOrdinal("especialidad")),
+                Telefono = reader.GetString(reader.GetOrdinal("telefono")),
+
+            };
+
             return docente;
         }
 
         public List<Docente> BuscarContiene(string nombre)
         {
             docentes = Consultar();
-            return docentes.Where(p => p.Nombres.Contains(nombre)).ToList();
+            if (nombre == "")
+            {
+                return docentes;
+            }
+            else
+            {
+                return docentes.Where(p => p.IdDocente.Contains(nombre) || p.Nombres.ToLower().Contains(nombre.ToLower())).ToList();
+
+            }
+            
         }
+
+        public Docente BuscarId(string identificacion)
+        {
+
+            docentes = Consultar();
+            return docentes.Where(estu => estu.IdDocente.Equals(identificacion)).FirstOrDefault();
+
+        }
+
+
+
+
+
+
 
     }
 }

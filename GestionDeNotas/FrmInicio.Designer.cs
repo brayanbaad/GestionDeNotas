@@ -33,7 +33,8 @@
             this.menuDocentes = new FontAwesome.Sharp.IconMenuItem();
             this.menuMaterias = new FontAwesome.Sharp.IconMenuItem();
             this.menuEstudiantes = new FontAwesome.Sharp.IconMenuItem();
-            this.iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
+            this.menuEspecialidades = new FontAwesome.Sharp.IconMenuItem();
+            this.menuMatricula = new FontAwesome.Sharp.IconMenuItem();
             this.menuTitulo = new System.Windows.Forms.MenuStrip();
             this.label1 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -49,7 +50,8 @@
             this.menuDocentes,
             this.menuMaterias,
             this.menuEstudiantes,
-            this.iconMenuItem1});
+            this.menuEspecialidades,
+            this.menuMatricula});
             this.menu.Location = new System.Drawing.Point(0, 48);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(1180, 71);
@@ -90,7 +92,7 @@
             this.menuMaterias.IconChar = FontAwesome.Sharp.IconChar.Book;
             this.menuMaterias.IconColor = System.Drawing.Color.Black;
             this.menuMaterias.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuMaterias.IconSize = 30;
+            this.menuMaterias.IconSize = 35;
             this.menuMaterias.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuMaterias.Name = "menuMaterias";
             this.menuMaterias.Size = new System.Drawing.Size(122, 67);
@@ -111,18 +113,33 @@
             this.menuEstudiantes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.menuEstudiantes.Click += new System.EventHandler(this.menuEstudiantes_Click);
             // 
-            // iconMenuItem1
+            // menuEspecialidades
             // 
-            this.iconMenuItem1.AutoSize = false;
-            this.iconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.PenClip;
-            this.iconMenuItem1.IconColor = System.Drawing.Color.Black;
-            this.iconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconMenuItem1.IconSize = 35;
-            this.iconMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.iconMenuItem1.Name = "iconMenuItem1";
-            this.iconMenuItem1.Size = new System.Drawing.Size(122, 67);
-            this.iconMenuItem1.Text = "Notas";
-            this.iconMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuEspecialidades.AutoSize = false;
+            this.menuEspecialidades.IconChar = FontAwesome.Sharp.IconChar.PenClip;
+            this.menuEspecialidades.IconColor = System.Drawing.Color.Black;
+            this.menuEspecialidades.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menuEspecialidades.IconSize = 35;
+            this.menuEspecialidades.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.menuEspecialidades.Name = "menuEspecialidades";
+            this.menuEspecialidades.Size = new System.Drawing.Size(122, 67);
+            this.menuEspecialidades.Text = "Especialidades";
+            this.menuEspecialidades.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuEspecialidades.Click += new System.EventHandler(this.menuEspecialidades_Click);
+            // 
+            // menuMatricula
+            // 
+            this.menuMatricula.AutoSize = false;
+            this.menuMatricula.IconChar = FontAwesome.Sharp.IconChar.ClipboardCheck;
+            this.menuMatricula.IconColor = System.Drawing.Color.Black;
+            this.menuMatricula.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menuMatricula.IconSize = 35;
+            this.menuMatricula.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.menuMatricula.Name = "menuMatricula";
+            this.menuMatricula.Size = new System.Drawing.Size(122, 67);
+            this.menuMatricula.Text = "Matricula";
+            this.menuMatricula.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuMatricula.Click += new System.EventHandler(this.menuMatricula_Click);
             // 
             // menuTitulo
             // 
@@ -223,8 +240,9 @@
         private FontAwesome.Sharp.IconMenuItem menuMaterias;
         private FontAwesome.Sharp.IconMenuItem menuEstudiantes;
         private System.Windows.Forms.Label lblUsuario;
-        private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
+        private FontAwesome.Sharp.IconMenuItem menuEspecialidades;
         private FontAwesome.Sharp.IconButton btnSalir;
         private System.Windows.Forms.Panel contenedor;
+        private FontAwesome.Sharp.IconMenuItem menuMatricula;
     }
 }

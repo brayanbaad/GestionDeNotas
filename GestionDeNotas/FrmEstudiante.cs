@@ -26,26 +26,6 @@ namespace GestionDeNotas
 
         }
 
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
-            string nombre = txtNombres.Text;
-            if (nombre != "")
-            {
-
-                EstudianteService estudianteService = new EstudianteService(ConfigConnection.connectionString);
-                dtgEstudiantes.DataSource = estudianteService.BuscarContiene(txtNombreBuscar.Text);
-            }
-            else
-            {
-                MessageBox.Show("Digite la cedula a consultar");
-                txtNombreBuscar.Focus();
-            }
-            
-
-        }
-
-
-
         private void Limpiar()
         {
             txtIdentificacion.Text = "";
@@ -57,33 +37,7 @@ namespace GestionDeNotas
             dtFecha.Text = DateTime.Now.ToString();
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            string identificacion = txtIdentificacion.Text;
-            if (identificacion != "")
-            {
-                Estudiante estudiante = estudianteService.BuscarId(identificacion);
-                if (estudiante != null)
-                {
-                    txtNombres.Text = estudiante.Nombres;
-                    txtApellidos.Text = estudiante.Apellidos;
-                    dtFecha.Text = estudiante.FechaNacimiento;
-                    txtCorreo.Text = estudiante.Email.Address;
-                    txtDireccion.Text = estudiante.Direccion;
-                    txtTelefono.Text = estudiante.Telefono;
-                }
-                else
-                {
-                    MessageBox.Show("El estudiante no se encuentra registrado");
-
-                }
-            }
-            else
-            {
-                MessageBox.Show("Digite la identifiacion del estudiante que desea buscar");
-                txtIdentificacion.Focus();
-            }
-        }
+        
 
         private void dtgEstudiantes_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -99,14 +53,13 @@ namespace GestionDeNotas
         private void btnIconRegistrar_Click(object sender, EventArgs e)
         {
             Estudiante estudiante = new Estudiante();
-            estudiante.Identificacion = txtIdentificacion.Text;
+            estudiante.IdEstudiante =  txtIdentificacion.Text;
             estudiante.Nombres = txtNombres.Text;
             estudiante.Apellidos = txtApellidos.Text;
             estudiante.FechaNacimiento = dtFecha.Text;
             estudiante.Email = new MailAddress(txtCorreo.Text.Trim());
             estudiante.Direccion = txtDireccion.Text;
             estudiante.Telefono = txtTelefono.Text;
-            estudiante.Promedio = 0;
             string mensaje = estudianteService.Registrar(estudiante);
             MessageBox.Show(mensaje, "MENSAJE DE REGISTRO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             estudianteService = new EstudianteService(ConfigConnection.connectionString);
@@ -177,6 +130,21 @@ namespace GestionDeNotas
         private void btnIconLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
+        }
+
+        private void txtNombreBuscar_TextChanged(object sender, EventArgs e)
+        {
+            string nombre = txtNombreBuscar.Text;
+            estudianteService = new EstudianteService(ConfigConnection.connectionString);
+            dtgEstudiantes.DataSource = estudianteService.BuscarContiene(nombre);
+            
+        }
+
+        private void txtIdentificacionBuscar_TextChanged(object sender, EventArgs e)
+        {
+            string identificacion = txtIdentificacionBuscar.Text;
+            estudianteService = new EstudianteService(ConfigConnection.connectionString);
+            dtgEstudiantes.DataSource = estudianteService.BuscarContiene(identificacion);
         }
 
         
